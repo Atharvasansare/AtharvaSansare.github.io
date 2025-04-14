@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-top: 40px;
+      color: #00e0ff;
+      position: relative;
+    }
+
+    h1::after {
+      content: '';
+      width: 100px;
+      height: 4px;
+      background-color: #00e0ff;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 100px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .info-box,
+    .form-box {
+      flex: 1;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .info-item i {
+      font-size: 24px;
+    }
+
+    .info-item h3 {
+      margin: 0;
+      color: #00e0ff;
+      font-size: 1.2rem;
+    }
+
+    .info-item p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+
+    .info-item a {
+      color: #00e0ff;
+      text-decoration: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #00e0ff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    input,
+    textarea {
+      background-color: #1a1a1a;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px; /* made smaller */
+      max-height: 100px;
+    }
+
+    button {
+      background-color: #00e0ff;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00bcd4;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Me</h1>
+
+  <div class="contact-wrapper">
+    <!-- Left Side Form -->
+    <div class="form-box">
+      <form>
+        <label for="name">👤 Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+        <label for="email">📧 Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+        <label for="phone">📱 Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+
+        <label for="message">💬 Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Right Side Info -->
+    <div class="info-box">
+      <div class="info-item">
+        <i>📧</i>
+        <div>
+          <h3>Email</h3>
+          <p>atharvasansare190@gmail.com</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i>📱</i>
+        <div>
+          <h3>Phone</h3>
+          <p>7420894610</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i>📍</i>
+        <div>
+          <h3>Address</h3>
+          <p>MIT AOE</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i>🔗</i>
+        <div>
+          <h3>LinkedIn</h3>
+          <p><a href="#">[Your LinkedIn Link Here]</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

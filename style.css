@@ -1,0 +1,150 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #000;
+    border-bottom: 1px solid #00f7ef;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: #00f7ef;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00f7ef;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .nav-links a:hover {
+    color: #00f7ef;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    min-height: 100vh;
+  }
+  
+  .content {
+    max-width: 50%;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  h1 span, h2 span {
+    color: #00f7ef;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+  
+  p {
+    margin: 1rem 0;
+    max-width: 500px;
+    line-height: 1.6;
+  }
+  
+  .buttons {
+    margin-top: 1.5rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: 2px solid #00f7ef;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #00f7ef;
+    margin-right: 10px;
+    transition: 0.3s;
+  }
+  
+  .btn.hire {
+    background-color: #00f7ef;
+    color: #000;
+    box-shadow: 0 0 15px #00f7ef;
+  }
+  
+  .btn:hover {
+    background-color: #00f7ef;
+    color: #000;
+    box-shadow: 0 0 10px #00f7ef;
+  }
+  
+  /* Social Icons */
+  .socials {
+    margin-top: 1.5rem;
+  }
+  
+  .socials a {
+    margin-right: 15px;
+    font-size: 1.4rem;
+    color: #00f7ef;
+    transition: transform 0.3s ease;
+  }
+  
+  .socials a:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Profile Image */
+  .profile-img img {
+    width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 0 60px #00f7ef;
+  }
+  
