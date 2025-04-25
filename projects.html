@@ -1,24 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects - Atharva Sansare</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects and Achievements - Atharva Sansare</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .logo span {
+      color: #00f7ef;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00f7ef;
+    }
+
+    /* Sections */
+    .projects-section, .certifications-section {
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .projects-section h1, .certifications-section h1 {
+      font-size: 3rem;
+      color: #00f7ef;
+      margin-bottom: 60px;
+    }
+
+    .projects-grid, .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .project-card, .certification-card {
+      background-color: #111;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      padding: 20px;
+      max-width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-card:hover, .certification-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #00f7ef80;
+    }
+
+    .project-image, .certification-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #00f7ef;
+    }
+
+    .project-name, .certification-name {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #00f7ef;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .certification-card a {
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .projects-grid, .certifications-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Atharva <span>Sansare</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <main style="padding: 100px 60px;">
-    <h1 style="color: #00f7ef; font-size: 3rem;">My Projects</h1>
-  </main>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="logo">Atharva <span>Sansare</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="projects.html">My Projects and Achievements</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- My Projects Section -->
+<section class="projects-section">
+  <h1>My Projects</h1>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="placeholder1.png" alt="PH-meter" class="project-image"> 
+      <div class="project-name">PH-meter</div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="placeholder2.png" alt="Light detecting switch" class="project-image"> 
+      <div class="project-name">Light detecting switch</div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="placeholder3.jpg" alt="Virtual lab" class="project-image"> 
+      <div class="project-name">Virtual lab</div>
+    </div>
+  </div>
+</section>
+
+<!-- My Certifications Section -->
+<section class="certifications-section">
+  <h1>My Certifications</h1>
+  <div class="certifications-grid">
+    <!-- Certification 1 -->
+    <div class="certification-card">
+      <a href="Cisco certificate.png" target="_blank">
+        <img src="Cisco certificate.png" alt="Essential of python" class="certification-image">
+        <div class="certification-name">Essential of python</div>
+      </a>
+    </div>
+
+    <!-- Certification 2 -->
+    <div class="certification-card">
+      <a href="IYMC certificate.png" target="_blank">
+        <img src="IYMC certificate.png" alt="IYMC" class="certification-image">
+        <div class="certification-name">IYMC</div>
+      </a>
+    </div>
+
+    <!-- Certification 3 -->
+    <div class="certification-card">
+      <a href="AR VR bootcamp.png" target="_blank">
+        <img src="AR VR bootcamp.png" alt="C-DAC Bootcamp" class="certification-image">
+        <div class="certification-name">C-DAC Bootcamp</div>
+      </a>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
