@@ -5,53 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atharva Sansare - Electronics Engineer</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-papCZT6l1ENv6xZmLbw8m4e7GVUqkA5AabHR8ikCI2ebbl7J2w4y3+e6kzI4M1FvDFe2x3nfuXK7SxXbtFPRNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Timeline and global paragraph alignment */
+    p {
+      text-align: justify;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #00f7ef;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #00f7ef,
+        #00f7ef 20px,
+        transparent 20px,
+        transparent 40px
+      );
+    }
+
+    .timeline-item {
+      padding: 20px 30px;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-item.left {
+      left: 0;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-content {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00f7ef80;
+    }
+
+    .timeline-content h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #00f7ef;
+    }
+
+    .timeline-content h2 {
+      margin: 10px 0 5px;
+      font-size: 1.4rem;
+      color: #00f7ef;
+    }
+
+    .timeline-content p {
+      margin: 5px 0;
+      line-height: 1.5;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .timeline::after {
+        left: 30px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-item.right {
+        left: 0%;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">Atharva <span>Sansare</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="logo">Atharva <span>Sansare</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="projects.html">My Projects and Achievements</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="content">
-      <h1>Hi, It's <span>Atharva</span></h1>
-      <h2>I'm an <span>Electronics Engineer</span></h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni quibusdam tempore iste veniam hic commodi autem quod odit id, exercitationem perferendis impedit earum nulla reprehenderit nisi modi officiis rem corporis?</p>
-      
-      <div class="buttons">
-        <a href="#" class="btn hire">Hire</a>
-        <a href="contact.html" class="btn contact">Contact</a>
-      </div>
+<!-- Hero Section -->
+<header class="hero">
+  <div class="content">
+    <h1>Hi, It's <span>Atharva</span></h1>
+    <h2>I'm an <span>Electronics Engineer</span></h2>
+    <p>
+      I’m an electronics engineer passionate about creating innovative solutions by blending engineering with digital design. 
+      With skills in frontend development, circuit design, Python, and emerging tech like AR, I’m driven by curiosity and a love for exploring how things work.
+    </p>
 
-      <div class="socials">
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="buttons">
+      <a href="#" class="btn hire">Hire</a>
+      <a href="contact.html" class="btn contact">Contact</a>
+    </div>
+
+    <div class="socials">
+      <a href="https://in.linkedin.com/in/atharva-gajanan-sansare-4922a4360" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/Atharvasansare" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/atharv_sansare?igsh=b3M0MHFtMGEzZXdk" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:atharvasansare190@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://x.com/sansare_at72580?t=glm6RMG2AG6U_sLCEiv64g&s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+
+  <div class="profile-img">
+    <img src="profile.jpg" width="200" height="380" alt="Atharva Profile" />
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" style="padding: 80px 60px; text-align: center;">
+  <h2 style="color: #00f7ef; font-size: 2.5rem; margin-bottom: 20px;">About Me</h2>
+  <p style="max-width: 800px; margin: 0 auto; line-height: 1.7; font-size: 1.05rem;">
+    I am an engineer and designer with a passion for creating, solving, and building electronic circuits, 
+    always driven by a curiosity to understand how things work. 
+    With a strong foundation in HTML and CSS, I can design and develop responsive, visually appealing websites, 
+    and I use Python efficiently for problem-solving, automation, and development tasks. 
+    As an electronics student, my interests are rooted in computer hardware and everyday electronic devices, 
+    and I also have some experience in Augmented Reality (AR). 
+    Beyond engineering, I’m deeply curious about physics and space, constantly seeking to expand my knowledge. 
+    I’m a quick learner, a creative thinker, and a dedicated problem-solver who thrives on exploring new ideas and technologies.
+  </p>
+</section>
+
+<!-- My Education Section -->
+<section id="education" style="padding: 80px 60px; background-color: #0a0a0a;">
+  <h2 style="text-align: center; color: #00f7ef; font-size: 2.8rem; margin-bottom: 80px;">My Education</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>2024 - 2028</h3>
+        <h2>BTech Electronics and Telecommunication</h2>
+        <p>MIT AOE College</p>
+        <p>Currently pursuing Bachelor's degree in Electronics and Telecommunication Engineering.</p>
       </div>
     </div>
 
-    <div class="profile-img">
-      <img src="profile.jpg" alt="Atharva Profile" />
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>2022 - 2024</h3>
+        <h2>Higher Secondary Education (HSC)</h2>
+        <p>HSC with General Sciences PCM</p>
+      </div>
     </div>
-  </header>
 
-  <!-- About Section -->
-  <section id="about" style="padding: 80px 60px;">
-    <h2 style="color: #00f7ef; font-size: 2.5rem;">About Me</h2>
-    <p style="max-width: 600px; line-height: 1.6;">I’m an electronics engineer with a passion for building creative and innovative solutions. With a foundation in frontend design and a love for tech, I enjoy combining engineering with digital aesthetics.</p>
-  </section>
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>2021 - 2022</h3>
+        <h2>Secondary Education (SSC)</h2>
+        <p>SSC</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 </body>
 </html>
